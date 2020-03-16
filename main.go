@@ -54,7 +54,10 @@ func main()  {
 	}
 	fmt.Println(channelClient)
 
-
+	serviceSetup := service.ServiceSetup{
+		ChaincodeID: "AlarmCC",
+		Client:channelClient,
+	}
 	
 
 	app := controller.Application{

@@ -1,16 +1,5 @@
 .PHONY: all dev clean build env-up env-down run
 
-all: clean build env-up run
-
-dev: build run
-
-##### BUILD
-build:
-	@echo "Build ..."
-	@dep ensure
-	@go build
-	@echo "Build done"
-
 ##### ENV
 env-up:
 	@echo "Start environment ..."
@@ -25,7 +14,7 @@ env-down:
 ##### RUN
 run:
 	@echo "Start app ..."
-	@./alarm
+	@nohup ./alarm &
 
 ##### CLEAN
 clean: env-down

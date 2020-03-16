@@ -3,12 +3,12 @@
 ##### ENV
 env-up:
 	@echo "Start environment ..."
-	@cd fixtures_arm && docker-compose up --force-recreate -d
+	@cd fixtures && docker-compose up --force-recreate -d
 	@echo "Environment up"
 
 env-down:
 	@echo "Stop environment ..."
-	@cd fixtures_arm && docker-compose down
+	@cd fixtures && docker-compose down
 	@echo "Environment down"
 
 ##### RUN

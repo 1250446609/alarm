@@ -1,0 +1,45 @@
+{
+  "network-config": {
+    "org1": {
+      "name": "peerOrg1",
+      "mspid": "org1.kevin.kongyixueyuan.com",
+      "peer1": {
+        "requests": "grpcs://127.0.0.1:7051",
+        "events": "grpcs://127.0.0.1:7053",
+        "server-hostname": "peer0.org1.kevin.kongyixueyuan.com",
+        "tls_cacerts":
+          "/home/ubuntu/go/src/github.com/kongyixueyuan.com/alarm/fixtures/crypto-config/peerOrganizations/org1.kevin.kongyixueyuan.com/peers/peer0.org1.kevin.kongyixueyuan.com/tls/ca.crt"
+      },
+      "peer2": {
+        "requests": "grpcs://127.0.0.1:7151",
+        "events": "grpcs://127.0.0.1:7153",
+        "server-hostname": "peer1.org1.kevin.kongyixueyuan.com",
+        "tls_cacerts":
+          "/home/ubuntu/go/src/github.com/kongyixueyuan.com/alarm/fixtures/crypto-config/peerOrganizations/org1.kevin.kongyixueyuan.com/peers/peer1.org1.kevin.kongyixueyuan.com/tls/ca.crt"
+      },
+      "admin": {
+        "key":
+          "/home/ubuntu/go/src/github.com/kongyixueyuan.com/alarm/fixtures/crypto-config/peerOrganizations/org1.kevin.kongyixueyuan.com/users/Admin@org1.kevin.kongyixueyuan.com/msp/keystore",
+        "cert":
+          "/home/ubuntu/go/src/github.com/kongyixueyuan.com/alarm/fixtures/crypto-config/peerOrganizations/org1.kevin.kongyixueyuan.com/users/Admin@org1.kevin.kongyixueyuan.com/msp/signcerts"
+      }
+    }
+  },
+  "channel": "kevinkongyixueyuan",
+  "orderers": [
+    {
+      "mspid": "OrdererMSP",
+      "server-hostname": "orderer.kevin.kongyixueyuan.com",
+      "requests": "grpcs://127.0.0.1:7050",
+      "tls_cacerts":
+        "/home/ubuntu/go/src/github.com/kongyixueyuan.com/alarm/fixtures/crypto-config/ordererOrganizations/kevin.kongyixueyuan.com/orderers/orderer.kevin.kongyixueyuan.com/tls/ca.crt"
+    }
+  ],
+  "keyValueStore": "/tmp/fabric-client-kvs",
+  "configtxgenToolPath": "/home/ubuntu/hyperledger-fabric-linux-arm64-1.2.0/bin",
+  "SYNC_START_DATE_FORMAT": "YYYY/MM/DD",
+  "syncStartDate": "2018/01/01",
+  "eventWaitTime": "30000",
+  "license": "Apache-2.0",
+  "version": "1.1"
+}
